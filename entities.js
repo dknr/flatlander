@@ -25,11 +25,17 @@ export const initialize = () => [
 	size: [1,1],
 	position: [1,1,2],
 },{
-	type: 'keymap',
-	w: (me, ops) => ops.up(me),
-	a: (me, ops) => ops.left(me),
-	s: (me, ops) => ops.down(me),
-	d: (me, ops) => ops.right(me),
+	type: 'wander',
+	strategy: 'move-right',
+}],
+[{
+	type: 'material',
+	color: 'orange',
+	size: [1,1],
+	position: [1,1,2],
+},{
+	type: 'wander',
+	strategy: 'move-down',
 }],
 ];
 

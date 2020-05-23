@@ -1,7 +1,10 @@
 const canvas = document.getElementById('canvas');
+canvas.height = 500;
+canvas.width = 500;
+
 const gfx = canvas.getContext('2d');
 export const graphics = (s,t) => {
-	s.flatMap(e => e.filter(c => c.type === 'material')).forEach((mat) => {
+	s.map(e => e.material).filter(c => c).map(mat => {
 		const scale = 10;
 		gfx.fillStyle = mat.color;
 		gfx.fillRect(

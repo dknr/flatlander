@@ -9,7 +9,7 @@ export const initialize = () => [
 	},
 },{
 	tag: 'player',
-	strategy: 'move-down',
+	input: 'player',
 	material: {
 		color: 'black',
 		size: [1,1],

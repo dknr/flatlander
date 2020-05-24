@@ -24,7 +24,7 @@ const strategies = {
 		const source = e.material.position;
 		const target = s.find(e => e.tag === 'player').material.position;
 		const path = [target[0] - source[0], target[1] - source[1]];
-		if (magnitudeVector(path) < 3) return ({});
+		if (magnitudeVector(path) < 4) return ({});
 		
 		const intent = unitVector([
 			target[0] - source[0],

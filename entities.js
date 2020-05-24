@@ -9,6 +9,7 @@ export const initialize = () => [
 },{
 	tag: 'player',
 	input: 'player',
+	strategy: 'random-walk',
 	material: {
 		color: 'black',
 		size: [1,1],

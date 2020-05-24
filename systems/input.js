@@ -12,6 +12,13 @@ const getPath = (a,b,s) => {
 export const input = () => {
 	let mouse;
 	const canvas = document.getElementById("canvas");
+	canvas.addEventListener("touchstart", ev => {
+		const touch = ev.touches[0];
+		mouse = [
+			(touch.clientX - canvas.offsetLeft) / 10,
+			(touch.clientY - canvas.offsetTop ) / 10,
+		];
+	});
 	canvas.addEventListener("mousemove", ev => {
 		mouse = [
 			(ev.layerX - canvas.offsetLeft) / 10,

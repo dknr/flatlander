@@ -17,7 +17,7 @@ export const initialize = () => [
 	},
 },{
 	tag: 'orangey',
-	strategy: 'move-right',
+	strategy: 'random-walk',
 	material: {
 		color: 'orange',
 		size: [1,1],

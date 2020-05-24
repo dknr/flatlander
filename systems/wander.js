@@ -11,7 +11,7 @@ const strategies = {
 	'move-right': () => ({intent: [1,0]}),
 	'move-down': () => ({intent: [1,0]}),
 	'random-walk': (s,e) => {
-		const speed = e.walkSpeed || 1;
+		const speed = e.wander.speed;
 		const getRandom = () => {
 			const random = Math.random();
 			return (2*random - 1);

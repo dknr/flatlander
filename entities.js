@@ -25,7 +25,7 @@ export const initialize = () => [
 			material: {
 				color: 'orange',
 				size: [0.5,0.5],
-				position: [10,10,1],
+				position: [40,40,1],
 			},
 			fate: {
 				ttl: 30,

@@ -5,12 +5,16 @@ import { graphics } from './graphics.js'
 import { input } from './input.js'
 import { wander } from './wander.js'
 import { physics } from './physics.js'
+import { reaper } from './reaper.js'
+import { spawner } from './spawner.js'
 
 const logState = (s,t) => console.log({s,t});
 
 export const systems = [
-	input(),
+	spawner,
+	reaper,
 	wander,
+	input(),
 	physics,
 	graphics,
 ];

@@ -9,6 +9,7 @@
 	"tag": "player",
 	"input": "player",
 	"strategy": "random-walk",
+	"wander": { "speed": 0.1 },
 	"material": {
 		"color": "black",
 		"size": [0.4,0.4],

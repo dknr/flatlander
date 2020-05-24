@@ -10,14 +10,15 @@ const magnitudeVector = (v) => Math.sqrt(Math.pow(v[0],2)+Math.pow(v[1],2));
 const strategies = {
 	'move-right': () => ({intent: [1,0]}),
 	'move-down': () => ({intent: [1,0]}),
-	'random-walk': () => {
+	'random-walk': (s,e) => {
+		const speed = e.walkSpeed || 1;
 		const getRandom = () => {
 			const random = Math.random();
-			return 0.6*(2*random - 1);
+			return (2*random - 1);
 		}
 		return ({intent: [
-			getRandom(),
-			getRandom(),
+			speed * getRandom(),
+			speed * getRandom(),
 		]});
 	},
 	'follow-player': (s,e) => {

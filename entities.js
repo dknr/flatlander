@@ -12,7 +12,7 @@ export const initialize = () => [
 	strategy: 'random-walk',
 	material: {
 		color: 'black',
-		size: [1,1],
+		size: [0.2,0.2],
 		position: [0,0,2],
 	},
 },{

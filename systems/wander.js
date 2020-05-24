@@ -13,7 +13,7 @@ const strategies = {
 	'random-walk': () => {
 		const getRandom = () => {
 			const random = Math.random();
-			return 2*random - 1;
+			return 0.6*(2*random - 1);
 		}
 		return ({intent: [
 			getRandom(),

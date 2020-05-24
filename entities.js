@@ -1,4 +1,3 @@
-// TODO: make this JSON
 export const initialize = () => [
 {
 	tag: 'ground',
@@ -21,6 +20,14 @@ export const initialize = () => [
 	material: {
 		color: 'orange',
 		size: [1,1],
-		position: [0,0,1],
+		position: [0,0,3],
+	},
+},{
+	tag: 'dog',
+	strategy: 'follow-player',
+	material: {
+		color: 'brown',
+		size: [1,1],
+		position: [10,10,1],
 	},
 }];

@@ -1,4 +1,4 @@
-import { systems } from './systems.js'
+import { systems } from './systems/index.js'
 import { initialize } from './entities.js'
 
 let tick = 0;

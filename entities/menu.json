@@ -1,0 +1,32 @@
+[{
+	"tag": "ground",
+	"material": {
+		"color": "black",
+		"size": [64,64],
+		"position": [0,0,0]
+	}
+},{
+	"tag": "player",
+	"input": "player",
+	"material": {
+		"color": "red",
+		"size": [0.4,0.4],
+		"position": [0,0,2]
+	}
+},{
+	"tag": "dog",
+	"strategy": "follow-player",
+	"material": {
+		"color": "green",
+		"size": [1,1],
+		"position": [20,30,1]
+	}
+},{
+	"tag": "/index",
+	"link": "entities/index.json",
+	"material": {
+		"color": "purple",
+		"size": [4,4],
+		"position": [50,50,0]
+	}
+}]

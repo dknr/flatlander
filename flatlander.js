@@ -1,12 +1,13 @@
 import { systems } from './systems/index.js'
-import { initialize } from './entities.js'
 
-let tick = 0;
-let state = initialize();
-window.setInterval(() => {
-	tick++;
-	state = systems.reduce((lastState, reducer) =>
-		reducer(lastState, tick) || lastState
-	, state);
-}, 100);
+(async () => {
+	let tick = 0;
+	let state = await (await fetch('entities/index.json')).json();
+	window.setInterval(async () => {
+		tick++;
+		for(const system of systems) {
+			state = (await system(state, tick)) || state;
+		}
+	}, 100);
+})();
 

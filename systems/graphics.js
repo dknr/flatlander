@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
-canvas.height = 500;
-canvas.width = 500;
+canvas.height = 640;
+canvas.width = 640;
 
 const gfx = canvas.getContext('2d');
 export const graphics = (s,t) => {

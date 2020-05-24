@@ -9,7 +9,6 @@ import { physics } from './systems/physics.js'
 const logState = (s,t) => console.log({s,t});
 
 export const systems = [
-	logState,
 	input(),
 	wander,
 	physics,

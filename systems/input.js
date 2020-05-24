@@ -10,7 +10,6 @@ const applyEvent = (e, ev) => {
 		return e;
 
 	const delta = action(e);
-	console.log(action, delta);
 	return {
 		...e,
 		...delta,

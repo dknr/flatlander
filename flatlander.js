@@ -8,5 +8,5 @@ window.setInterval(() => {
 	state = systems.reduce((lastState, reducer) =>
 		reducer(lastState, tick) || lastState
 	, state);
-}, 1000);
+}, 100);
 

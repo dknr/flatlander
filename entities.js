@@ -15,6 +15,22 @@ export const initialize = () => [
 		position: [0,0,2],
 	},
 },{
+	tag: 'water-spawner',
+	spawn: {
+		archetype: {
+			tag: 'water',
+			strategy: 'random-walk',
+			material: {
+				color: 'blue',
+				size: [10,12],
+				position: [0,40,0],
+			},
+			fate: {
+				ttl: 100,
+			},
+		},
+	},
+},{
 	tag: 'spark-spawner',
 	spawn: {
 		initial: 5,

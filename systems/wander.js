@@ -13,12 +13,10 @@ const consider = (strategy, material) => {
 }
 export const wander = (s,t) => {
 	const wanderers = s.filter(e => e.strategy);
-	console.log(wanderers);
 	wanderers.forEach((wanderer) => {
 		const wandererMaterial = wanderer.material;
 		const wandererStrategy = wanderer.strategy;
 		const [x,y] = consider(wandererStrategy, wandererMaterial);
-		console.log({wanderer, wandererMaterial, wandererStrategy});
 		wandererMaterial.position = [
 			wandererMaterial.position[0] + x,
 			wandererMaterial.position[1] + y,

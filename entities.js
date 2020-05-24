@@ -9,9 +9,10 @@ export const initialize = () => [
 },{
 	tag: 'player',
 	input: 'player',
+	strategy: 'random-walk',
 	material: {
 		color: 'black',
-		size: [1,1],
+		size: [0.2,0.2],
 		position: [0,0,2],
 	},
 },{

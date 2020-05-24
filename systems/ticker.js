@@ -3,7 +3,7 @@ export const ticker = () => {
 	const tick = document.getElementById('tick');
 	return (s,t) => {
 		const now = new Date().getTime();
-		tick.innerText = `${Math.round(1000/(now-then))}fps - ${t.toString()}`;
+		tick.innerText = `${Math.round(1000/(now-then))}fps - ${t.toString()} - ${s.length}`;
 		then = now;
 	}
 }

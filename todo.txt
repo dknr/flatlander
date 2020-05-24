@@ -1,0 +1,2 @@
+- isometric graphics (2.5D)
+- input on mobile devices

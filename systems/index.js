@@ -7,10 +7,12 @@ import { wander } from './wander.js'
 import { physics } from './physics.js'
 import { reaper } from './reaper.js'
 import { spawner } from './spawner.js'
+import { ticker } from './ticker.js'
 
 const logState = (s,t) => console.log({s,t});
 
 export const systems = [
+	ticker(),
 	spawner,
 	reaper,
 	wander,

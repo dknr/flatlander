@@ -23,11 +23,14 @@ export const input = () => {
 			window.clearTimeout(timeout);
 		timeout = window.setTimeout(() => mouse = undefined, 500);
 	});
-	canvas.addEventListener("mousemove", ev => {
+	canvas.addEventListener("mousedown", ev => {
 		mouse = [
 			(ev.layerX - canvas.offsetLeft) / 10,
 			(ev.layerY - canvas.offsetTop)  / 10,
 		];
+		if (timeout)
+			window.clearTimeout(timeout);
+		timeout = window.setTimeout(() => mouse = undefined, 500);
 	});
 	return (s,t) => {
 		if (mouse === undefined)

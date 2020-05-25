@@ -18,7 +18,7 @@
 	"location": [12,13.5],
 	"label": {
 		"type": "label",
-		"text": "controls: touch / mouse",
+		"text": "controls: touch / click",
 		"color": "#4f1",
 		"font": "24px Overpass",
 		"align": "left"

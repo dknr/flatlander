@@ -6,6 +6,13 @@
 		"position": [0,0,0]
 	}
 },{
+	"location": [10,10],
+	"label": {
+		"type": "label",
+		"text": "welcome",
+		"color": "pink"
+	}
+},{
 	"tag": "player",
 	"input": "player",
 	"material": {

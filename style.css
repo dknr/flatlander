@@ -1,0 +1,18 @@
+body {
+	margin: 8px;
+	background-color: black;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#canvas {
+	width: 640px;
+	height: 640px;
+}
+pre {
+	color: green;
+}
+
+

@@ -8,6 +8,6 @@ import { systems } from './systems/index.js'
 		for(const system of systems) {
 			state = (await system(state, tick)) || state;
 		}
-	}, 1000/24);
+	}, 100);
 })();
 

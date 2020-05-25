@@ -6,10 +6,18 @@
 		"position": [0,0,0]
 	}
 },{
+	"location": [32,20],
+	"label": {
+		"type": "label",
+		"text": "F L A T L A N D E R",
+		"font": "64px Overpass",
+		"color": "blue"
+	}
+},{
 	"tag": "player",
 	"input": "player",
 	"strategy": "random-walk",
-	"wander": { "speed": 0.1 },
+	"wander": { "speed": 0.4 },
 	"material": {
 		"color": "black",
 		"size": [0.4,0.4],
@@ -26,9 +34,16 @@
 },{
 	"tag": "/menu",
 	"link": "entities/menu.json",
-	"material": {
+	"location": [50,50],
+	"label": {
+		"type": "label",
+		"text": "/menu",
+		"font": "16px Overpass",
+		"color": "white"
+	},
+	"circle": {
+		"type": "circle",
 		"color": "purple",
-		"size": [4,4],
-		"position": [50,50,0]
+		"radius": 4
 	}
 }]

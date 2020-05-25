@@ -3,7 +3,7 @@ const getDistance = (a,b) => {
 	return Math.sqrt(Math.pow(v[0],2)+Math.pow(v[1],2));
 }
 export const portal = async (s) => {
-	const portals = s.filter(e => e.link && e.material);
+	const portals = s.filter(e => e.link && e.location);
 	const portal = portals[0];
 	const player = s.find(e => e.tag === 'player');
 	const dog = s.find(e => e.tag === 'dog');
@@ -11,11 +11,11 @@ export const portal = async (s) => {
 	const distance = ({
 		player: getDistance(
 			player.material.position,
-			portal.material.position,
+			portal.location,
 		),
 		dog: getDistance(
 			dog.material.position,
-			portal.material.position,
+			portal.location,
 		),
 	});
 	if (distance.player > 5 || distance.dog > 5)

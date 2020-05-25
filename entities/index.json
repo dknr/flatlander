@@ -21,7 +21,7 @@
 	"material": {
 		"color": "black",
 		"size": [0.4,0.4],
-		"position": [0,0,2]
+		"position": [32,32,2]
 	}
 },{
 	"tag": "dog",
@@ -34,10 +34,10 @@
 },{
 	"tag": "/menu",
 	"link": "entities/menu.json",
-	"location": [50,50],
+	"location": [32,50],
 	"label": {
 		"type": "label",
-		"text": "/menu",
+		"text": "start",
 		"font": "16px Overpass",
 		"color": "white"
 	},

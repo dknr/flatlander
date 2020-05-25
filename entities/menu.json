@@ -45,18 +45,17 @@
 		"position": [10,13,1]
 	}
 },{
-	"tag": "/index",
-	"link": "entities/index.json",
+	"link": "entities/level0.json",
 	"location": [10,50],
 	"label": {
 		"type": "label",
-		"text": "go back",
+		"text": "level0",
 		"font": "16px Overpass",
-		"color": "white"
+		"color": "#813"
 	},
 	"circle": {
 		"type": "circle",
-		"color": "purple",
+		"color": "white",
 		"radius": 4
 	}
 },{

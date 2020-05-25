@@ -22,6 +22,14 @@
 		"color": "blue"
 	}
 },{
+	"location": [32,30],
+	"label": {
+		"type": "label",
+		"text": "play fetch - tap / click",
+		"font": "24px Overpass",
+		"color": "#99a"
+	}
+},{
 	"tag": "player",
 	"input": "player",
 	"strategy": "random-walk",

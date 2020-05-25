@@ -1,24 +1,15 @@
 [{
 	"tag": "ground",
 	"material": {
-		"color": "grey",
+		"color": "green",
 		"size": [64,64],
 		"position": [0,0,0]
 	}
 },{
-	"location": [32.2,10.2],
-	"label": {
-		"type": "label",
-		"text": "F L A T L A N D E R",
-		"font": "64px Overpass",
-		"color": "black"
-	},
-	"strategy": "move-down"
-},{
 	"location": [32,20],
 	"label": {
 		"type": "label",
-		"text": "level0",
+		"text": "1",
 		"font": "64px Overpass",
 		"color": "blue"
 	}
@@ -27,8 +18,8 @@
 	"input": "player",
 	"strategy": "random-walk",
 	"wander": { 
-		"speed": 1.1,
-		"bias": [0.3,0.003]
+		"speed": 0.1,
+		"bias": [0.3,0.4]
 	},
 	"material": {
 		"color": "yellow",
@@ -44,7 +35,7 @@
 		"position": [20,30,1]
 	}
 },{
-	"link": "entities/level1.json",
+	"link": "entities/win.json",
 	"location": [32,50],
 	"label": {
 		"type": "label",
@@ -56,24 +47,6 @@
 		"type": "circle",
 		"color": "#114",
 		"radius": 5
-	}
-},{
-	"spawn": {
-		"archetype": {
-			"strategy": "random-walk",
-			"wander": { 
-				"speed": 0.21,
-				"bias": [0,0.023]
-			},
-			"material": {
-				"color": "orange",
-				"size": [0.5,0.5],
-				"position": [32,2,1]
-			},
-			"fate": {
-				"ttl": 3000
-			}
-		}
 	}
 },{
 	"spawn": {

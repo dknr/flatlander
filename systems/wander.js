@@ -12,13 +12,14 @@ const strategies = {
 	'move-down': () => ({intent: [1,0]}),
 	'random-walk': (s,e) => {
 		const speed = e.wander.speed;
+		const bias = e.wander.bias || [0,0];
 		const getRandom = () => {
 			const random = Math.random();
 			return (2*random - 1);
 		}
 		return ({intent: [
-			speed * getRandom(),
-			speed * getRandom(),
+			bias[0] + speed * getRandom(),
+			bias[1] + speed * getRandom(),
 		]});
 	},
 	'follow-player': (s,e) => {

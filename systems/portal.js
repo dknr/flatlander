@@ -18,7 +18,7 @@ export const portal = async (s) => {
 			portal.location,
 		),
 	});
-	if (distance.player > 5 || distance.dog > 5)
+	if (distance.player > 5 || distance.dog > 6)
 		return;
 
 	const newWorld = await (await fetch(portal.link)).json();

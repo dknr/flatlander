@@ -7,17 +7,21 @@ const makeVector = (a,b) =>
 const getPath = (a,b,s) => {
 	const v = makeVector(a,b);
 	const d = getDistance(v);
-	return scaleVector(v,d < 1 ? 1 : 1/d);
+	return scaleVector(v,0.2);
 }
 export const input = () => {
 	let mouse;
+	let timeout;
 	const canvas = document.getElementById("canvas");
 	canvas.addEventListener("touchstart", ev => {
-		const touch = ev.touches[0];
+		const touch = ev.targetTouches[0];
 		mouse = [
-			(touch.clientX - canvas.offsetLeft) / 10,
-			(touch.clientY - canvas.offsetTop ) / 10,
+			(touch.screenX - canvas.offsetLeft) / 10,
+			(touch.screenY - canvas.offsetTop) / 10,
 		];
+		if (timeout)
+			window.clearTimeout(timeout);
+		timeout = window.setTimeout(() => mouse = undefined, 500);
 	});
 	canvas.addEventListener("mousemove", ev => {
 		mouse = [

@@ -23,7 +23,6 @@ export const graphics = (s,t) => {
 		);
 	});
 	visitComponents(s, 'circle', (e,c) => {
-		console.log('circle', {e,c});
 		gfx.fillStyle = c.color;
 		gfx.beginPath();
 		gfx.arc(

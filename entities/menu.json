@@ -60,11 +60,28 @@
 		"radius": 4
 	}
 },{
+	"tag": "/index",
+	"link": "entities/index.json",
+	"location": [30,50],
+	"label": {
+		"type": "label",
+		"text": "go back",
+		"font": "16px Overpass",
+		"color": "white"
+	},
+	"circle": {
+		"type": "circle",
+		"color": "purple",
+		"radius": 4
+	}
+},{
+	"tag": "/level0",
 	"link": "entities/level0.json",
 	"location": [50,50],
 	"circle": {
 		"type": "circle",
-		"color": "#142"
+		"color": "#142",
+		"radius": 4
 	},
 	"label": {
 		"type": "label",

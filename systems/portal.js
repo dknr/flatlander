@@ -4,23 +4,27 @@ const getDistance = (a,b) => {
 }
 export const portal = async (s) => {
 	const portals = s.filter(e => e.link && e.location);
-	const portal = portals[0];
+	if (portals.length === 0)
+		return;
+	
 	const player = s.find(e => e.tag === 'player');
 	const dog = s.find(e => e.tag === 'dog');
-	
-	const distance = ({
-		player: getDistance(
-			player.material.position,
-			portal.location,
-		),
-		dog: getDistance(
-			dog.material.position,
-			portal.location,
-		),
-	});
-	if (distance.player > 5 || distance.dog > 6)
-		return;
 
-	const newWorld = await (await fetch(portal.link)).json();
-	return newWorld;
+	for (const portal of portals) {
+		const distance = ({
+			player: getDistance(
+				player.material.position,
+				portal.location,
+			),
+			dog: getDistance(
+				dog.material.position,
+				portal.location,
+			),
+		});
+		if (distance.player > 5 || distance.dog > 6)
+			continue;
+
+		const newWorld = await (await fetch(portal.link)).json();
+		return newWorld;
+	}
 };

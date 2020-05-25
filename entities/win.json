@@ -1,7 +1,7 @@
 [{
 	"tag": "ground",
 	"material": {
-		"color": "grey",
+		"color": "yellow",
 		"size": [64,64],
 		"position": [0,0,0]
 	}
@@ -18,7 +18,7 @@
 	"location": [32,20],
 	"label": {
 		"type": "label",
-		"text": "level0",
+		"text": "you won. yay.",
 		"font": "64px Overpass",
 		"color": "blue"
 	}
@@ -28,10 +28,10 @@
 	"strategy": "random-walk",
 	"wander": { 
 		"speed": 0.1,
-		"bias": [0,0.003]
+		"bias": [0,0.03]
 	},
 	"material": {
-		"color": "yellow",
+		"color": "green",
 		"size": [0.4,0.4],
 		"position": [32,32,2]
 	}
@@ -44,11 +44,12 @@
 		"position": [20,30,1]
 	}
 },{
-	"link": "entities/win.json",
+	"tag": "/menu",
+	"link": "entities/index.json",
 	"location": [32,50],
 	"label": {
 		"type": "label",
-		"text": "",
+		"text": "again?",
 		"font": "24px Overpass",
 		"color": "white"
 	},
@@ -56,23 +57,5 @@
 		"type": "circle",
 		"color": "#114",
 		"radius": 5
-	}
-},{
-	"spawn": {
-		"archetype": {
-			"strategy": "random-walk",
-			"wander": { 
-				"speed": 0.91,
-				"bias": [0,0.023]
-			},
-			"material": {
-				"color": "orange",
-				"size": [0.5,0.5],
-				"position": [32,2,1]
-			},
-			"fate": {
-				"ttl": 3000
-			}
-		}
 	}
 }]

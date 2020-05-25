@@ -1,7 +1,7 @@
 const applyIntent = (intent, material) => {
 	const newPosition = [
-		material.position[0] + intent[0],
-		material.position[1] + intent[1],
+		(material.position[0] + intent[0]) % 64,
+		(material.position[1] + intent[1]) % 64,
 		material.position[2],
 	];
 	if (newPosition[0] < 0 || newPosition[1] < 0)

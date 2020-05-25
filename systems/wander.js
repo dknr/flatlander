@@ -1,3 +1,4 @@
+import {vector} from '../libraries/vector.js'
 const unitVector = (v) => {
 	const magnitude = Math.sqrt(Math.pow(v[0],2)+Math.pow(v[1],2));
 	return [
@@ -17,21 +18,20 @@ const strategies = {
 			const random = Math.random();
 			return (2*random - 1);
 		}
-		return ({intent: [
-			bias[0] + speed * getRandom(),
-			bias[1] + speed * getRandom(),
-		]});
+		const intent = vector([getRandom(),getRandom()])
+			.scale(speed)
+			.add(vector(bias))
+			.value;
+		return ({intent});
 	},
 	'follow-player': (s,e) => {
 		const source = e.material.position;
 		const target = s.find(e => e.tag === 'player').material.position;
-		const path = [target[0] - source[0], target[1] - source[1]];
-		if (magnitudeVector(path) < 4) return ({});
-		
-		const intent = unitVector([
-			target[0] - source[0],
-			target[1] - source[1],
-		]);
+		const path = vector(target).sub(vector(source));
+		if (path.magnitude < 3)
+			return ({});
+
+		const intent = path.scale(1 / path.magnitude).value;
 		return ({intent});
 	},
 

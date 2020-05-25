@@ -48,7 +48,7 @@
 	"material": {
 		"color": "brown",
 		"size": [1,1],
-		"position": [20,30,1]
+		"position": [20,30]
 	}
 },{
 	"tag": "/menu",

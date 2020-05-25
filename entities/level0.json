@@ -1,23 +1,24 @@
 [{
 	"tag": "ground",
 	"material": {
-		"color": "green",
+		"color": "grey",
 		"size": [64,64],
 		"position": [0,0,0]
 	}
 },{
-	"location": [32.2,20.2],
+	"location": [32.2,10.2],
 	"label": {
 		"type": "label",
 		"text": "F L A T L A N D E R",
 		"font": "64px Overpass",
-		"color": "grey"
-	}
+		"color": "black"
+	},
+	"strategy": "move-down"
 },{
 	"location": [32,20],
 	"label": {
 		"type": "label",
-		"text": "F L A T L A N D E R",
+		"text": "level0",
 		"font": "64px Overpass",
 		"color": "blue"
 	}
@@ -48,7 +49,7 @@
 	"location": [32,50],
 	"label": {
 		"type": "label",
-		"text": "start",
+		"text": "win",
 		"font": "24px Overpass",
 		"color": "white"
 	},
